@@ -14,8 +14,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn0 = findViewById(R.id.name_button0)
-        btn1 = findViewById(R.id.name_button0)
-        btn2 = findViewById(R.id.name_button0)
-        btn3 = findViewById(R.id.name_button0)
+        btn1 = findViewById(R.id.name_button1)
+        btn2 = findViewById(R.id.name_button2)
+    }
+
+    private fun clickHandler() {
+        TODO("Not yet implemented")
     }
 }
