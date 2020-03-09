@@ -11,11 +11,11 @@
         android:name="com.cyogere.nav_ctrl_1.TitleFragment"
         android:label="fragment_title" >
         <action
-            android:id="@+id/action_titleFragment_to_gameFragment2"
-            app:destination="@id/gameFragment2" />
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
-        android:id="@+id/gameFragment2"
+        android:id="@+id/gameFragment"
         android:name="com.cyogere.nav_ctrl_1.GameFragment"
         android:label="GameFragment" />
 </navigation>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
+<RelativeLayout
 
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -18,5 +18,44 @@
         android:textSize="20sp"
         android:textStyle="bold"/>
 
-</LinearLayout>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/uganda"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/rwanda"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/burundi"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/kenya"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+    </RadioGroup>
+
+</RelativeLayout>
 </layout>
