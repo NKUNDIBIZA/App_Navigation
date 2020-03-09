@@ -3,5 +3,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">This is is my title Fragment</string>
+    <string name="shop">Muhawe ikaze muri shop ya cyogere. kuri ubu mwatangira gukora gahunda zanyu</string>
     <string name="kanda">KANDA</string>
 </resources>
