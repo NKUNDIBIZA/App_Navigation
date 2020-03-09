@@ -11,6 +11,7 @@ android {
         applicationId "com.cyogere.nav_ctrl_1"
         minSdkVersion 19
         targetSdkVersion 29
+        vectorDrawables.useSupportLibrary = true  //Custom
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -20,8 +21,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        productFlavors {
+        }
     }
 
+    // Allow data biding "Custom"
     dataBinding {
         enabled = true
     }
@@ -37,4 +41,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Navigation related "Custom"
+    def nav_version = "2.3.0-alpha03"
+
+    // Kotlin custom
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
 }
