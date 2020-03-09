@@ -11,12 +11,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
-<!--    <fragment-->
-<!--        android:id="@+id/titleFagment"-->
-<!--        android:name="com.cyogere.nav_ctrl_1.TitleFragment"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"/>-->
+    
     <fragment
         android:id="@+id/myNavHostFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
