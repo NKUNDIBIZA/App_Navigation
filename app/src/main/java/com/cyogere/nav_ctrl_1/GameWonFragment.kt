@@ -8,13 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.cyogere.nav_ctrl_1.databinding.FragmentGameWonBinding
 
 class GameWonFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-            val binding: FragmentGameWonBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
+        val binding: FragmentGameWonBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_won, container, false)
+        binding.startButton.setOnClickListener {v: View ->
+            v.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+        }
         return binding.root
         }
     }
