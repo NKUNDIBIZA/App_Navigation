@@ -54,8 +54,17 @@
             android:layout_gravity="center"
             android:text="@string/kenya"
             android:textSize="20sp"
-            android:padding="10dp"/>
+            android:padding="10dp" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
 </RelativeLayout>
 </layout>
