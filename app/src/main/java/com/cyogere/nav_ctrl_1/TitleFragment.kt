@@ -2,14 +2,13 @@ package com.cyogere.nav_ctrl_1
 
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.cyogere.nav_ctrl_1.databinding.FragmentTitleBinding
 
 class TitleFragment : Fragment() {
@@ -32,6 +31,22 @@ class TitleFragment : Fragment() {
             // 3) Use the Navigation onClickListner
         binding.clickButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
 
+        // Tell android that this fragment has menu
+        setHasOptionsMenu(true)
+
+
         return binding.root
         }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.over_flow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return NavigationUI.onNavDestinationSelected(item!!, view!!.findNavController()) || super.onOptionsItemSelected(item)
+
+        // If the navigation does not handle the menu item, super.onOptionsItemSelected(item) will handle it without navigating
+    }
 }

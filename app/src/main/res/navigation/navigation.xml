@@ -47,4 +47,8 @@
             app:destination="@id/gameFragment"
             app:popUpTo="@+id/titleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.cyogere.nav_ctrl_1.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>
