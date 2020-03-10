@@ -19,7 +19,7 @@ class TitleFragment : Fragment() {
             val binding:FragmentTitleBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_title,container, false)
 
         // Add onclick listener for the pay button
-        /*binding.clickButton.setOnClickListener{ view: View ->
+       /* binding.clickButton.setOnClickListener{ view: View ->
 
             // 1) First method of navigating
             /*Navigation.findNavController(view) //find instance of the nav controller ()
