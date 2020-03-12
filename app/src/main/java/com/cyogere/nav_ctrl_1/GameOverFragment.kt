@@ -18,7 +18,8 @@ class GameOverFragment : Fragment() {
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_over, container, false)
 
         binding.playAgainButton.setOnClickListener{ v: View ->
-            v.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment)
+            //v.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment) // Old way without safeArgs gradle lib
+            v.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
         return binding.root
 

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.GameFragment">
+
+    <data>
+
+        <variable
+            name="game"
+            type="com.cyogere.nav_ctrl_1.GameFragment" />
+    </data>
+
 <RelativeLayout
 
     android:orientation="vertical"
@@ -12,8 +23,10 @@
         android:id="@+id/gameFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shop"
-        android:gravity="center"
+        android:text="@{game.currentQuestion.text}"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/radioGroup"
+        android:layout_marginBottom="30dp"
         android:padding="20dp"
         android:textSize="20sp"
         android:textStyle="bold"/>
@@ -28,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/uganda"
+            android:text="@{game.answers[0]}"
             android:textSize="20sp"
             android:padding="10dp"/>
         <RadioButton
@@ -36,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/rwanda"
+            android:text="@{game.answers[1]}"
             android:textSize="20sp"
             android:padding="10dp"/>
         <RadioButton
@@ -44,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/burundi"
+            android:text="@{game.answers[2]}"
             android:textSize="20sp"
             android:padding="10dp"/>
         <RadioButton
@@ -52,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/kenya"
+            android:text="@{game.answers[3]}"
             android:textSize="20sp"
             android:padding="10dp" />
     </RadioGroup>
