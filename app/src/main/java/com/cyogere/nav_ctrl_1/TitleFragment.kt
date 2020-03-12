@@ -18,18 +18,21 @@ class TitleFragment : Fragment() {
             val binding:FragmentTitleBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_title,container, false)
 
         // Add onclick listener for the pay button
-       /* binding.clickButton.setOnClickListener{ view: View ->
+        binding.clickButton.setOnClickListener{ view: View ->
 
             // 1) First method of navigating
             /*Navigation.findNavController(view) //find instance of the nav controller ()
                 .navigate(R.id.action_titleFragment_to_gameFragment)*/
 
             // 2) Second method using the "navigation:navigation-ui-ktx" dependency
-            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
-        }*/
+            //view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+
+            //4) Replace R.id.action_titleFragment_to_gameFragment by the safe arg way
+            view.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+        }
 
             // 3) Use the Navigation onClickListner
-        binding.clickButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
+        //binding.clickButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
 
         // Tell android that this fragment has menu
         setHasOptionsMenu(true)
